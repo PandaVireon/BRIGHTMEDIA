@@ -705,6 +705,24 @@ select option { background: var(--vireon-card); color: var(--white); }
           </div>
         </div>
 
+        <div class="form-row">
+          <div class="form-group">
+            <label for="password">Password <span aria-hidden="true" style="color:var(--red)">*</span></label>
+            <div class="input-wrap"> 
+              <span class="input-icon" aria-hidden="true">🔒</span>
+              <input type="password" id="password" name="password" placeholder="Create a strong password"
+                required autocomplete="new-password" aria-required="true" aria-describedby="password-error password-strength-label"
+                minlength="8" style="padding-right: 45px;"> 
+              <button type="button" id="togglePassword" class="eye-btn" aria-label="Toggle password visibility">
+                <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+              </button>
+            </div>
+            <div class="pw-strength" aria-hidden="true"><div class="pw-strength-bar" id="pw-bar"></div></div>
+            <div class="pw-strength-label" id="password-strength-label" aria-live="polite"></div>
+            <p class="field-error" id="password-error" role="alert">Password must be at least 8 characters.</p>
+          </div>
+        </div>
+
            <div class="form-group">
             <label for="country">Country <span aria-hidden="true" style="color:var(--red)">*</span></label>
             <div class="input-wrap">
@@ -730,24 +748,7 @@ select option { background: var(--vireon-card); color: var(--white); }
             <p class="field-error" id="country-error" role="alert">Please select your country.</p>
           </div>
     </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="password">Password <span aria-hidden="true" style="color:var(--red)">*</span></label>
-            <div class="input-wrap"> 
-              <span class="input-icon" aria-hidden="true">🔒</span>
-              <input type="password" id="password" name="password" placeholder="Create a strong password"
-                required autocomplete="new-password" aria-required="true" aria-describedby="password-error password-strength-label"
-                minlength="8" style="padding-right: 45px;"> 
-              <button type="button" id="togglePassword" class="eye-btn" aria-label="Toggle password visibility">
-                <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
-              </button>
-            </div>
-            <div class="pw-strength" aria-hidden="true"><div class="pw-strength-bar" id="pw-bar"></div></div>
-            <div class="pw-strength-label" id="password-strength-label" aria-live="polite"></div>
-            <p class="field-error" id="password-error" role="alert">Password must be at least 8 characters.</p>
-          </div>
-        </div>
+</div>
         
 
         <!-- Consent checkbox -->
